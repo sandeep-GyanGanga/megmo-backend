@@ -43,6 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
             //yes
+            System.out.println(" token is valid  ,  start with bearer string");
 
             jwtToken = requestTokenHeader.substring(7);
 
@@ -57,7 +58,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             }
 
         } else {
-            System.out.println("Invalid token , not start with bearer string");
+//            System.out.println("Invalid token , not start with bearer string");
         }
 
         //validated
